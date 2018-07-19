@@ -18,6 +18,9 @@ public class UserController {
 		return new Greeting(counter.incrementAndGet(),
 				String.format(template, name));
 	}
+	
+	//Greeting object converted into JSON String internally
+	
 	@GetMapping("/greeting/{name}")
 	public Greeting getGreeting(@PathVariable(value="name",required=false) String name) {
 		return new Greeting(counter.incrementAndGet(),
